@@ -21,7 +21,7 @@ if __name__ == "__main__":
     recursive_instance = recursive_class(dimensions)
     print("Recursive(1, " + str(n-1) + "), len = " + str(len(dimensions)))
     start = time.time()
-    m = recursive_instance.recursive(1, n-1)
+    m = recursive_instance.recursive()
     end = time.time()
     run_time = end - start
     timings[n]["recursive"] = run_time
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     memoized_instance = memoized_class(dimensions)
     print("Memoized(1, " + str(n-1) + ")")
     start = time.time()
-    m = memoized_instance.memoized(1, n-1)
+    m = memoized_instance.memoized()
     end = time.time()
     run_time = end - start
     timings[n]["memoized"] = run_time
